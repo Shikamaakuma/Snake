@@ -14,6 +14,7 @@ namespace Snake
         private int directionChange = 0;
         private LinkedList<Limb> newLimb;
 
+        //initializes the player(SnakeTheAnimal) and creates its first three bodyparts
         public SnakeTheAnimal()
         {
             newLimb = new LinkedList<Limb>();
@@ -36,7 +37,7 @@ namespace Snake
             this.directionChange = last;
         }
         
-        //sets movement direction (0-3) of snake new
+        //sets movement direction (0-3) of snake new 0=downwards and clockwise up from there 
         private void setDirection(int newDirection)
         {
             direction += newDirection;
@@ -59,7 +60,7 @@ namespace Snake
                 newLimb.RemoveFirst();
             }
 
-            //decides where the snake will be heading next and creates the head
+            //decides where the snake will be heading next and creates the head( 0=downwards and clockwise up from there )
             int[] currentHead = (int[])body.First().getPosition().Clone();
             this.setDirection(this.directionChange);
             this.directionChange = 0; 
@@ -88,6 +89,7 @@ namespace Snake
 
         }
 
+        //called if the head hits on food
         public void eat(int[] food)
         {
             this.newLimb.AddLast(new Limb(food));

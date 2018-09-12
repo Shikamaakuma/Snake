@@ -5,3 +5,7 @@ Dont expect a fully fledged out Snake since this is a project i started for fun 
 Patchnotes:
 -Added first Build
 -lots is missing like scores/game-over screen and more...
+
+build 1.0.1;
+added more comments;
+Will work on tuning down on global variables next

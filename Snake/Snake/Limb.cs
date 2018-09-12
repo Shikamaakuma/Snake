@@ -17,7 +17,7 @@ namespace Snake
             this.position = position;
         }
 
-        //new position for Limb
+        //new position for Limb in as x and y axis
         public void setPosition(int[] newPosition)
         {
             this.position = newPosition;
